@@ -27,6 +27,7 @@ ALLOWED_HOST = ['*', '0.0.0.0', '192.168.43.49']
 Now save and close the file, and re run on browser you will be able to access the application now. 
 ```
 
+
 **Creating the Deployment of same application**
 ```
 kubectl apply -f deployment-app.yml
