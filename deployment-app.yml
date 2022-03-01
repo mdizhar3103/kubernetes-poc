@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "django-app-deployment"
+  labels:
+    apps: "djangoApp"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      apps: "djangoApp"
+  template:
+    metadata:
+      labels:
+        apps: "djangoApp"
+    spec:
+      containers:
+        - name: "django-deploy"
+          image: docker.io/mohdizhar/django-app

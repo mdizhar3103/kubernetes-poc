@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: "app-service"
+  labels:
+    apps: "djangoa-app-service"
+spec:
+  selector:
+    apps: "django-pod"
+  type: NodePort
+  ports:
+    - nodePort: 30000
+      port: 81
+      targetPort: 8000 
